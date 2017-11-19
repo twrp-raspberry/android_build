@@ -2335,6 +2335,9 @@ else # BUILDING_RECOVERY_IMAGE
 RECOVERY_RESOURCE_ZIP :=
 endif # BUILDING_RECOVERY_IMAGE
 
+.PHONY: ramdisk-recovery
+ramdisk-recovery: $(recovery_ramdisk)
+
 .PHONY: recoveryimage
 recoveryimage: $(INSTALLED_RECOVERYIMAGE_TARGET) $(RECOVERY_RESOURCE_ZIP)
 
